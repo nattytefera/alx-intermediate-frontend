@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Image Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @media (max-width: 768px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body class="p-4">
+    <!-- Header -->
+    <header class="bg-blue-500 text-white p-4">
+      <h1 class="text-3xl">Grid, Flexbox & Image Gallery</h1>
+    </header>
+
+    <!-- Main Grid Layout -->
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+      <!-- Section: Flexbox Layout spanning 2 columns -->
+      <section class="lg:col-span-2 flex">
+        <div class="p-4 bg-red-200 w-1/2">Flexbox Item 1</div>
+        <div class="p-4 bg-red-400 w-1/2">Flexbox Item 2</div>
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="bg-green-200 p-4">Sidebar</aside>
+    </main>
+
+    <!-- Responsive Image Gallery -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+      <img
+        src="https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-0Q0i1NyRbLs"
+        alt="Image 1"
+        class="w-full h-auto rounded-lg shadow-md"
+      />
+      <img
+        src="https://unsplash.com/photos/a-city-skyline-at-sunset-bBQejMe0xKI"
+        alt="Image 2"
+        class="w-full h-auto rounded-lg shadow-md"
+      />
+      <img
+        src="https://unsplash.com/photos/a-city-next-to-a-body-of-water-sCI37YaMlNk"
+        alt="Image 3"
+        class="w-full h-auto rounded-lg shadow-md"
+      />
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 mt-4">
+      <p>&copy; 2024 Nait's Blog</p>
+    </footer>
+  </body>
+</html>
